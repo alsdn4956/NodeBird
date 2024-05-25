@@ -42,12 +42,12 @@ class User extends Sequelize.Model {
         db.User.belongsToMany(db.User, { //팔로워
             foreignKey: 'followingId',
             as: 'Followers',
-            through: 'Follow',
+            through: 'Follow'
         })
         db.User.belongsToMany(db.User, { //팔로잉
             foreignKey: 'followerId',
             as: 'Followings',
-            through: 'Follow',
+            through: 'Follow'
         })
     }
 }
